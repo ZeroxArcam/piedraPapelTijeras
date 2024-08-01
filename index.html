@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Game</title>
+  <link rel="stylesheet" href="styles/piedra-papel-tijeras.css">
+</head>
+
+<body>
+  <p class="title">Piedra Papel Tijeras</p>
+
+  <button onclick="
+    playGame('Piedra');
+    updateScore();
+    
+  " class="move-button"><img src="images\Piedra.jpg" alt="piedra" class="move-icon"></button>
+
+  <button onclick="
+    playGame('Papel');
+    updateScore();
+  " class="move-button" ;><img src="images\Papel.jpg" alt="papel" class="move-icon"></button>
+
+  <button onclick="
+    playGame('Tijeras');
+    updateScore()    
+  " class="move-button" ;><img src="images\Tijeras.jpg" alt="tijera" class="move-icon"></button>
+
+  <p class="js-result result">resultado</p>
+  <p class="js-move">
+
+  </p>
+  <p class="js-score score"></p>
+
+  <button onclick="
+    score.wins=0;
+    score.loses=0;
+    score.ties=0;
+    localStorage.removeItem('score')
+    updateScore()
+    alert('Juego reseteado')
+    " class="reset-button">Reset</button>
+
+  <script src="scripts\piedra-papel-tijeras.js"></script>
+</body>
+
+</html>
